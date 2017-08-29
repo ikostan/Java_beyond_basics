@@ -25,12 +25,8 @@ public class CollectionsIntro {
 	private static void setList(){
 		
 		list = new ArrayList<String>();
-
-		for(String str : strArray){
-			
-			list.add(str);
-		}
-		
+		list.addAll(Arrays.asList(strArray));		
+	
 		for(int i = 0; i < list.size(); i++){
 			
 			System.out.println(list.get(i));
@@ -66,8 +62,7 @@ public class CollectionsIntro {
 		while(iterator.hasNext()){
 			
 			System.out.println(iterator.next());
-		}
-		
+		}		
 	}
 	
 	
