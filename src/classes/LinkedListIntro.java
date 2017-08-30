@@ -12,12 +12,14 @@ public class LinkedListIntro {
 	private static String[] strArray;
 	private static Iterator iterator;
 	
+	
 	public static void main(String[] args) {
 
 		strArray = new String[]{"eggs", "dogs", "lions", "panters", "cats", "horses", "pigs"};
-
+		
 		setList();
 		replaceItem("cats", "snakes");
+		addItemIndx(list.indexOf("snakes") + 1, "cats");
 		printAll();
 	}
 
@@ -60,16 +62,17 @@ public class LinkedListIntro {
 	
 	
 	private static void addItem(String item){
-		
-		if(list.contains(item)){
 			
-			list.add(item);
-			System.out.println(item + " was added to the list");
-		}
-		else{
-			
-			System.out.println("There is no such item");
-		}
+		list.add(item);
+		System.out.println(item + " was added to the list");
+	
+	}
+	
+	
+	private static void addItemIndx(int indx, String item){
+				
+		list.add(indx, item);
+		System.out.println(item + " was added to the list");
 	}
 	
 	
