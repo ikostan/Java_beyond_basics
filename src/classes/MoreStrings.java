@@ -5,6 +5,8 @@ import java.io.PrintStream;
 
 public class MoreStrings {
 	
+	private final String TAG = MoreStrings.class.getSimpleName();
+	
     private static String a = "Something";
     private static String b = "Whatever";
     private static String c = "";

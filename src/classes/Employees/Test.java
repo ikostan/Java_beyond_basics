@@ -2,6 +2,8 @@ package classes.Employees;
 
 public class Test {
 
+	private final String TAG = Test.class.getSimpleName();
+
 	public static void main(String[] args) {
 
 		AllEmployees employees = new AllEmployees();

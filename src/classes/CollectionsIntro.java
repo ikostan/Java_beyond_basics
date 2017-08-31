@@ -9,7 +9,7 @@ import java.util.List;
 
 public class CollectionsIntro {
 
-	
+	private final String TAG = CollectionsIntro.class.getSimpleName();
 	private static String[] strArray;
 	private static List<String> list;
 	

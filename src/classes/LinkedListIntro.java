@@ -9,6 +9,8 @@ import java.util.List;
 
 public class LinkedListIntro {
 
+	private final String TAG = LinkedListIntro.class.getSimpleName();
+
 	private static List list;
 	private static String[] strArray;
 	private static Iterator iterator;
@@ -30,13 +32,7 @@ public class LinkedListIntro {
 		list = new LinkedList<String>();
 		list.addAll(Arrays.asList(strArray));
 	}
-	
-	
-	private static void setIterator(){
-		
-		iterator = list.iterator();
-	}
-	
+
 	
 	private static void printItem(String item){
 		
@@ -48,6 +44,12 @@ public class LinkedListIntro {
 			
 			System.out.println("There is no such item");
 		}
+	}
+	
+	
+	private static void setIterator(){
+		
+		iterator = list.iterator();
 	}
 	
 	
@@ -66,7 +68,6 @@ public class LinkedListIntro {
 			
 		list.add(item);
 		System.out.println(item + " was added to the list");
-	
 	}
 	
 	

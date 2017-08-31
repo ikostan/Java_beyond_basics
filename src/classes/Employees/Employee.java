@@ -2,6 +2,8 @@ package classes.Employees;
 
 public class Employee implements Comparable<Employee>{
 
+	private final String TAG = Employee.class.getSimpleName();
+
 	private int age, expirience, empID;
 	private String fName, lName, department, profession;
 	

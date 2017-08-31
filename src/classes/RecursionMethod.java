@@ -6,6 +6,8 @@ import javax.swing.JOptionPane;
 
 public class RecursionMethod {
 	
+	private final String TAG = RecursionMethod.class.getSimpleName();
+	
 	//Main method
     public static void main(String[] args) {
     	
