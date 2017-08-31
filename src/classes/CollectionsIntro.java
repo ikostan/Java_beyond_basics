@@ -2,8 +2,10 @@ package classes;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
+
 
 public class CollectionsIntro {
 
@@ -34,6 +36,45 @@ public class CollectionsIntro {
 	}
 	
 	
+	private int findItemIndx(String item){
+		
+		int i = -1;
+		
+		if(!list.isEmpty() && list.contains(item)){
+			
+			i = list.indexOf(item);
+		}
+		
+		return i;
+	}
+	
+	
+	private void addItem(String item){
+		
+		if(list != null){
+			
+			list.add(item);
+		}
+		else{
+			
+			System.out.println("The dosen't exist in the memory. Please create a new list.");			
+		}
+	}
+	
+	
+	private void addItemIndx(int indx, String item){
+		
+		if(list != null){
+			
+			list.add(indx, item);
+		}
+		else{
+			
+			System.out.println("The dosen't exist in the memory. Please create a new list.");			
+		}
+	}
+	
+	
 	private static void delItem(String item){
 		
 		if(list.contains(item)){
@@ -54,6 +95,20 @@ public class CollectionsIntro {
 	}
 	
 	
+	private static void replaceItem(String oldItem, String newItem){
+		
+		if(list.contains(oldItem)){
+			
+			Collections.replaceAll(list, oldItem, newItem);
+			System.out.println(oldItem + " was replaced by " + newItem);
+		}
+		else{
+			
+			System.out.println("There is nothing to replace.");
+		}
+	}
+	
+	
 	private static void printAll(){
 		
 		System.out.println("Printing all items from the list:");
@@ -65,6 +120,19 @@ public class CollectionsIntro {
 		}		
 	}
 	
+	
+	private static void sortList(){
+		
+		Collections.sort(list);
+		printAll();
+	}
+	
+	
+	private static void reverseList(){
+		
+		Collections.reverse(list);
+		printAll();
+	}
 	
 	
 	//END
