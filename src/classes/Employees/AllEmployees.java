@@ -1,11 +1,13 @@
 package classes.Employees;
 
 import java.util.HashMap;
+import java.util.List;
 
 public class AllEmployees {
 
 	private final String TAG = AllEmployees.class.getSimpleName();
 	private static HashMap<Integer, String> employeeList;
+	private static List<Employee> allEmployees;
 	private final static int ID_LENGTH = 6;
 	
 	

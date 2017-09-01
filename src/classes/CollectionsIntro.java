@@ -77,7 +77,7 @@ public class CollectionsIntro {
 	
 	private static void delItem(String item){
 		
-		if(list.contains(item)){
+		if(list != null && !list.isEmpty() && list.contains(item)){
 			
 			int indx = list.indexOf(item);
 			System.out.println("The item was found and will be removed from the list, index: " + indx);			
@@ -97,7 +97,7 @@ public class CollectionsIntro {
 	
 	private static void replaceItem(String oldItem, String newItem){
 		
-		if(list.contains(oldItem)){
+		if(list != null && !list.isEmpty() && list.contains(oldItem)){
 			
 			Collections.replaceAll(list, oldItem, newItem);
 			System.out.println(oldItem + " was replaced by " + newItem);

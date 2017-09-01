@@ -31,11 +31,11 @@ public class Employee implements Comparable<Employee>{
 		}
 		else if(this.getSalary() < o.getSalary()){
 			
-			i = 1; //This earns less
+			i = -1; //This earns less
 			indecator ="less";
 		}
 		
-		System.out.println(this.getEmpID() + " earns " + indecator);
+		System.out.println(this.getEmpID() + " earns " + indecator + " than " + o.getEmpID());
 		return i;
 	}
 	
