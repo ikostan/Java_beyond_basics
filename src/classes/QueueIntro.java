@@ -21,7 +21,7 @@ public class QueueIntro {
 		setQueue();
 		printAll();
 		
-		System.out.println("Removing all elements from the stack:");
+		System.out.println("Removing all elements from the queue:");
 		removeAll();
 	}
 
