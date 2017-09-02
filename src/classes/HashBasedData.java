@@ -34,6 +34,8 @@ public class HashBasedData {
 		printAll();
 		removeAll();
 		printAll();
+				
+		hashIt(strArray[rnd.nextInt(strArray.length)]);
 	}
 
 
@@ -116,6 +118,11 @@ public class HashBasedData {
 		map.put(key, value);
 	}
 	
+	
+	static private void hashIt(String str){
+		
+		System.out.println("'" + str + "'" + " hashed value " + str.hashCode());
+	}
 	
 	//END
 }
