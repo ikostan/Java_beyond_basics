@@ -52,8 +52,6 @@ private final String TAG = QueueIntro.class.getSimpleName();
 		}
 	}
 	
-		
-	
+			
 	//END
-
 }
