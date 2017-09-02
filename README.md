@@ -5,4 +5,6 @@
 - Recursion intro
 - Collections: List, ArrayList, Iterator, LinkedList
 
-Based on 'Intermediate Java Tutorial': https://www.youtube.com/playlist?list=PL27BCE863B6A864E3
+Based on:
+- 'Intermediate Java Tutorial': https://www.youtube.com/playlist?list=PL27BCE863B6A864E3
+- 'Programming Foundations: Data Structures' (lynda.com): https://www.lynda.com/Developer-Programming-Foundations-tutorials/Foundations-Programming-Data-Structures
