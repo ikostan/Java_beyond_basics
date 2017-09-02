@@ -2,8 +2,8 @@
 
 ### Topics included:
 - String class and related methods
-- Recursion intro
-- Collections: List, ArrayList, Iterator, LinkedList
+- Recursion introduction
+- Collections and Data Structure: List, ArrayList, Iterator, LinkedList, Stack, Queue, PriorityQueue, Comparator
 
 Based on:
 - 'Intermediate Java Tutorial': https://www.youtube.com/playlist?list=PL27BCE863B6A864E3
