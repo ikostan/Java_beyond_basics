@@ -1,5 +1,6 @@
 package classes;
 
+import java.util.Comparator;
 import java.util.Random;
 import java.util.Stack;
 
@@ -16,28 +17,104 @@ public class StackIntro {
 		rnd = new Random();
 		stack = new Stack<>();
 		
-		while(stack.size() < MAX){			
-			stack.push(rnd.nextInt(MAX));
-		}
+		System.out.println("Unsorted:");
+		setStack();
+		printAll();
 		
-		int i = 0;
+		System.out.println("Sorted:");
+		sortAll();
+		printAll();
+				
+		System.out.println("Sorted in reverse:");
+		rsortAll();
+		printAll();
 		
-		while(i < stack.size()){
-			
-			System.out.println(stack.peek());
-			i++;
-		}
-		System.out.println("Size: " + stack.size());
-		
-		
-		while(!stack.empty()){
-			
-			System.out.println(stack.pop());
-		}
-		System.out.println("Size: " + stack.size());
-		
+		System.out.println("Removing all elements from the stack:");
+		removeAll();
 	}
 	
+	
+	private static void setStack(){
+		
+		while(stack.size() < MAX){					
+			stack.push(rnd.nextInt(MAX));
+		}
+	}
+	
+	
+	private static void printAll(){
+		
+		for(Integer intr : stack){
+			System.out.println(intr);
+		}
+		System.out.println("Size: " + stack.size());
+	}
+	
+	
+	private static void sortAll(){
+				
+		stack.sort(new StackComparator());
+	}
+
+
+	private static void rsortAll(){
+	
+		stack.sort(new StackReverseComparator());
+	}
+	
+	private static void removeAll(){
+		
+		while(!stack.empty()){
+			System.out.println(stack.peek());
+			stack.pop();
+		}
+		System.out.println("Size: " + stack.size());
+	}
+	
+	
+	static class StackComparator implements Comparator<Integer> {
+
+		@Override
+		public int compare(Integer arg0, Integer arg1) {
+			
+			if(arg0 == arg1){
+				
+				return 0;
+			}
+			else if(arg0 > arg1){
+				
+				return 1;
+			}
+			else{
+				
+				return -1;
+			}
+			
+		}
+	
+	}
+		
+	static class StackReverseComparator implements Comparator<Integer> {
+
+		@Override
+		public int compare(Integer arg0, Integer arg1) {
+				
+			if(arg0 == arg1){
+					
+				return 0;
+			}
+			else if(arg0 > arg1){
+					
+				return -1;
+			}
+			else{
+					
+				return 1;
+			}
+				
+		}
+			
+	}
 	
 	//END
 }
