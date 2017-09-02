@@ -1,9 +1,15 @@
 # Java_beyond_basics
 
-### Topics included:
+### Topics include:
 - String class and related methods
 - Recursion introduction
-- Collections and Data Structure: List, ArrayList, Iterator, LinkedList, Stack, Queue, PriorityQueue, Comparator, Hash-Based Data Structure (HashMap)
+- Collections and Data Structure: List, ArrayList, Iterator, LinkedList, PriorityQueue, Comparator
+- Sorting and searching arrays
+- Using stacks for last-in, first-out (LIFO) structures
+- Using queues for first-in, first-out (FIFO) structures
+- Working with hash tables
+- Understanding binary search trees (BSTs)
+- Learning about graphs
 
 Based on:
 - 'Intermediate Java Tutorial': https://www.youtube.com/playlist?list=PL27BCE863B6A864E3
