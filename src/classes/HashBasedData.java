@@ -29,6 +29,17 @@ public class HashBasedData {
 		
 		createHash();
 		printAll();
+		removeItemKey(rnd.nextInt(MAX));
+		removeItemObj(strArray[rnd.nextInt(strArray.length)]);
+		printAll();
+		removeAll();
+		printAll();
+	}
+
+
+	private static void removeAll() {
+		
+		map.clear();
 	}
 
 
@@ -38,8 +49,8 @@ public class HashBasedData {
 		Iterator iterator = keys.iterator();
 		
 		while(iterator.hasNext()){	
-			Integer indx = (Integer) iterator.next();
-			System.out.println(indx + "\t: " + map.get(indx));
+			Integer indxKey = (Integer) iterator.next();
+			System.out.println(indxKey + "\t: " + map.get(indxKey));
 		}
 		
 		System.out.println("Size: " + map.size());
@@ -58,6 +69,53 @@ public class HashBasedData {
 		}
 	}
 
+	
+	private static void removeItemKey(Integer key){
+		
+		if(map.containsKey(key)){
+			
+			System.out.println(String.format("removing >>> %d : %s", key, map.get(key).toString()));
+			map.remove(key); 
+		}
+		else{
+			
+			System.out.println("There is no such object...");
+		}
+	}
+	
+	
+	private static void removeItemObj(String obj){
+		
+		if(map.containsValue(obj)){
+			
+			int key = 0;
+			Set<Integer> keys = map.keySet();
+			Iterator iterator = keys.iterator();
+			
+			while(iterator.hasNext()){	
+
+				key = (int) iterator.next();
+				
+				if(map.get(key)  == obj){
+	
+					System.out.println(String.format("removing >>> %d : %s", key, obj));
+					map.remove(key); 
+					break;
+				}
+			}			
+		}
+		else{
+			
+			System.out.println("There is no such object...");
+		}
+	}	
+	
+
+	private static void addItem(Integer key, String value){
+		
+		map.put(key, value);
+	}
+	
 	
 	//END
 }
